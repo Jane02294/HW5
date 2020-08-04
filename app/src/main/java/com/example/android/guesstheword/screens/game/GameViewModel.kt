@@ -4,7 +4,6 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import timber.log.Timber
 
 class GameViewModel : ViewModel() {
 
@@ -103,12 +102,11 @@ class GameViewModel : ViewModel() {
 
     /** Method for the game completed event **/
 
-    fun onGameFinish() {
-        _eventGameFinish.value = true
-    }
-
     fun onGameFinishComplete() {
         _eventGameFinish.value = false
+    }
+    fun onGameFinish() {
+        _eventGameFinish.value = true
     }
 
 }
